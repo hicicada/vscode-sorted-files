@@ -6,6 +6,11 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.0.7] - 2026-01-20
+
+- Fixed default sort order behavior in configuration update
+- Changed sort order reset to use 'default' value instead of undefined
+
 ## [0.0.6] - 2026-01-20
 
 - Default enable on startup

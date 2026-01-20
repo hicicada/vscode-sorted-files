@@ -16,7 +16,7 @@ export const change_sort_order = (activate: boolean) => {
         }
         path = vscode.workspace.getConfiguration('vscode-sorted-files').get('file') ?? '.vscode/.sorted';
     } else {
-        config.update('sortOrder', undefined, vscode.ConfigurationTarget.Workspace);
-        OUTPUT_CHANNEL.appendLine('remove sort order override');
+        config.update('sortOrder', 'default', vscode.ConfigurationTarget.Workspace);
+        OUTPUT_CHANNEL.appendLine('sort changed to default');
     }
 };

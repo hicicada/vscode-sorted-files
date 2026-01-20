@@ -4,7 +4,7 @@
     "description": "vscode sorted files",
     "repository": "https://github.com/hicicada/vscode-sorted-files",
     "publisher": "hicicada",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "engines": {
         "vscode": "^1.108.1"
     },
