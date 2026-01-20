@@ -6,4 +6,15 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.0.3] - 2026-01-20
+
+- Fixed gitignore pattern matching for proper ignore file support
+- Improved relative path matching in file traversal
+
+## [0.0.2] - 2026-01-20
+
+- Improved launch configuration for extension testing
+
+## [0.0.1] - 2026-01-20
+
 - Initial release

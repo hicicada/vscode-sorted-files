@@ -57,12 +57,12 @@ const get_gitignore_files = (project_path: string): string => {
     let defaultGitignorePattern = '**/.git/**';
     try {
         let content = readFileSync(project_path + '.gitignore', 'utf-8');
-        let lines = content.split(/\r?\n/); // Handles both Windows and Unix line endings
-        lines.push(defaultGitignorePattern); // Normally gitignore files doesn't include the .git folder, but we want to include it
+        let lines = content.split(/\r?\n/).map((s) => s.trim()); // Handles both Windows and Unix line endings
         let removedComments = lines.filter((item) => item.charAt(0) !== '#');
         let removedEmptyLines = removedComments.filter((item) => item !== '');
         let prefixedGitignoreFiles = removedEmptyLines.map((file) => '**/' + file + '**');
         let trimmedGitignoreFiles = prefixedGitignoreFiles.map((file) => file.trim());
+        trimmedGitignoreFiles.push(defaultGitignorePattern); // Normally gitignore files doesn't include the .git folder, but we want to include it
         let ignorePatterns = trimmedGitignoreFiles.join(',');
         ignorePatterns = `{${ignorePatterns}}`;
         return ignorePatterns;
@@ -80,12 +80,12 @@ const find_all_files_and_folders_with_ignore = async (
     const entries = await vscode.workspace.fs.readDirectory(project_path_uri);
     for (const [entryName, entryType] of entries) {
         const entryUri = vscode.Uri.joinPath(project_path_uri, entryName);
-        if (minimatch(entryUri.path, ignore_patterns)) {
+        if (minimatch(entryUri.path, ignore_patterns, { dot: true })) {
             continue;
         }
         results.add(entryUri.fsPath);
         if (entryType === vscode.FileType.Directory) {
-            await find_all_files_and_folders_with_ignore(project_path_uri, ignore_patterns, results);
+            await find_all_files_and_folders_with_ignore(entryUri, ignore_patterns, results);
         }
     }
 };

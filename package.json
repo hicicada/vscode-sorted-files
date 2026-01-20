@@ -4,22 +4,21 @@
     "description": "vscode sorted files",
     "repository": "https://github.com/hicicada/vscode-sorted-files",
     "publisher": "hicicada",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "engines": {
         "vscode": "^1.108.1"
     },
+    "icon": "images/logo.png",
     "categories": [
         "Other"
     ],
-    "activationEvents": [],
+    "activationEvents": [
+        "onStartupFinished",
+        "onDidSaveTextDocument"
+    ],
     "main": "./dist/extension.js",
     "contributes": {
-        "commands": [
-            {
-                "command": "vscode-sorted-files.helloWorld",
-                "title": "Hello World"
-            }
-        ]
+        "commands": []
     },
     "scripts": {
         "vscode:prepublish": "pnpm run package",
