@@ -4,7 +4,7 @@
     "description": "vscode sorted files",
     "repository": "https://github.com/hicicada/vscode-sorted-files",
     "publisher": "hicicada",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "engines": {
         "vscode": "^1.108.1"
     },
@@ -18,7 +18,17 @@
     ],
     "main": "./dist/extension.js",
     "contributes": {
-        "commands": []
+        "commands": [],
+        "configuration": {
+            "title": "Sorted Files",
+            "properties": {
+                "vscode-sorted-files.file": {
+                    "type": "string",
+                    "default": ".vscode/.sorted",
+                    "description": "Path to the file that stores the sorted file order. File location is relative to the workspace root."
+                }
+            }
+        }
     },
     "scripts": {
         "vscode:prepublish": "pnpm run package",

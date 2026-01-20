@@ -20,7 +20,7 @@ export const change_sort_order = (activate: boolean) => {
         } else {
             updated = false;
         }
-        path = vscode.workspace.getConfiguration('vscode-sorted-files').get('file');
+        path = vscode.workspace.getConfiguration('vscode-sorted-files').get('file') ?? '.vscode/.sorted';
     } else {
         if (updated) {
             config.update('sortOrder', current_sort_order, vscode.ConfigurationTarget.Workspace);

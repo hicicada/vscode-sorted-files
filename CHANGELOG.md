@@ -6,6 +6,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.0.4] - 2026-01-20
+
+- Added `vscode-sorted-files.file` configuration option for customizing sort file location
+
 ## [0.0.3] - 2026-01-20
 
 - Fixed gitignore pattern matching for proper ignore file support
