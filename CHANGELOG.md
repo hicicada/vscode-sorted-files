@@ -6,6 +6,11 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.0.8] - 2026-01-20
+
+- Fixed deactivate function to properly await async config updates
+- Changed deactivate to async function for reliable cleanup on extension shutdown
+
 ## [0.0.7] - 2026-01-20
 
 - Fixed default sort order behavior in configuration update
