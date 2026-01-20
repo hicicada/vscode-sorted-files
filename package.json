@@ -2,6 +2,8 @@
   "name": "vscode-sorted-files",
   "displayName": "vscode-sorted-files",
   "description": "vscode sorted files",
+  "repository": "https://github.com/hicicada/vscode-sorted-files",
+  "publisher": "hicicada",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.108.1"
