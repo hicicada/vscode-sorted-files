@@ -6,6 +6,11 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.0.6] - 2026-01-20
+
+- Default enable on startup
+- Remove sortOrder configuration
+
 ## [0.0.5] - 2026-01-20
 
 - Added performance metrics to sorting completion message
