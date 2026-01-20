@@ -10,6 +10,7 @@ import { OUTPUT_CHANNEL } from './output';
 import { get_project_path_uri } from './path';
 
 export const sort_files = async () => {
+    let start = Date.now();
     let project_path_uri = get_project_path_uri();
     let project_path = project_path_uri.fsPath + path.sep;
     let target = read_config(project_path);
@@ -20,7 +21,8 @@ export const sort_files = async () => {
     target = target.map((file) => project_path + file);
     const list = [...default_sorted_files, ...target];
     modify_last_changed_date(list);
-    OUTPUT_CHANNEL.appendLine('Sorting completed');
+    let end = Date.now();
+    OUTPUT_CHANNEL.appendLine(`Sorting completed. ${list.length} Files. Time taken: ${end - start} ms.`);
 };
 
 const modify_last_changed_date = (files: string[]) => {

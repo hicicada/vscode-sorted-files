@@ -6,6 +6,11 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.0.5] - 2026-01-20
+
+- Added performance metrics to sorting completion message
+- Display file count and execution time in output channel
+
 ## [0.0.4] - 2026-01-20
 
 - Added `vscode-sorted-files.file` configuration option for customizing sort file location
