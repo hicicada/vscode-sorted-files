@@ -4,7 +4,7 @@
     "description": "vscode sorted files",
     "repository": "https://github.com/hicicada/vscode-sorted-files",
     "publisher": "hicicada",
-    "version": "0.0.12",
+    "version": "0.0.13",
     "engines": {
         "vscode": "^1.108.1"
     },
@@ -22,6 +22,11 @@
         "configuration": {
             "title": "Sorted Files",
             "properties": {
+                "vscode-sorted-files.enabled": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Enable or disable the sorted files feature."
+                },
                 "vscode-sorted-files.file": {
                     "type": "string",
                     "default": ".vscode/.sorted",

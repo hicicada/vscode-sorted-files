@@ -17,3 +17,7 @@ export const change_sort_order = (activate: boolean) => {
         OUTPUT_CHANNEL.appendLine('sort changed to default 1');
     }
 };
+
+export const is_enabled = () => {
+    return !!vscode.workspace.getConfiguration('vscode-sorted-files').get('enabled');
+};

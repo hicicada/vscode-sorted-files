@@ -6,6 +6,13 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.0.13] - 2026-01-20
+
+- Added enable/disable configuration option for the sorted files feature
+- Added `is_enabled()` function to check if the extension is enabled
+- Modified extension activation/deactivation to respect the enabled setting
+- Import `is_enabled` function in extension.ts
+
 ## [0.0.8] - 2026-01-20
 
 - Fixed deactivate function to properly await async config updates
