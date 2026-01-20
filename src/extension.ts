@@ -12,6 +12,6 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 // This method is called when your extension is deactivated
-export async function deactivate() {
-    await change_sort_order(false);
+export function deactivate() {
+    change_sort_order(false);
 }
